@@ -14,3 +14,4 @@
 Route::get('/', 'PagesController@root')->name('root');
 
 Route::get('/test', 'TestController@index');
+Auth::routes();
