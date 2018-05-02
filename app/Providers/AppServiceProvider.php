@@ -16,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
 	{
 		\App\Models\User::observe(\App\Observers\UserObserver::class);
+		\App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
 		\App\Models\Topic::observe(\App\Observers\TopicObserver::class);
 
         // MySql支持的utf8编码最大字符长度为3字节，如果遇到4字节的宽字符就会出现插入异常,　需要调整字符串长度解决
