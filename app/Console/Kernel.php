@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
 
     /**
      * Define the application's command schedule.
-     *
+     * crontab调用方法 『* * * * * php /home/vagrant/Code/larabbs/artisan schedule:run >> /dev/null 2>&1』
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
@@ -26,6 +26,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        // 一小时执行一次『活跃用户』数据生成的命令
+        $schedule->command('larabbs:calculate-active-user')->hourly();
     }
 
     /**
