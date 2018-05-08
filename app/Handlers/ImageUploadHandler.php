@@ -5,7 +5,7 @@
  * Date: 18-4-27
  * Time: 下午4:58
  */
-namespace App\Handles;
+namespace App\Handlers;
 
 
 use Intervention\Image\Facades\Image;

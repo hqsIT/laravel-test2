@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Handles\ImageUploadHandler;
+use App\Handlers\ImageUploadHandler;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;

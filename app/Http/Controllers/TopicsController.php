@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Handles\ImageUploadHandler;
+use App\Handlers\ImageUploadHandler;
 use App\Models\Category;
 use App\Models\Link;
 use App\Models\Topic;
