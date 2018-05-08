@@ -54,6 +54,9 @@ $api->version('v1', [
         'expires' => config('api.rate_limits.access.expires'),
     ], function ($api) {
         // 游客可以访问的接口
+        $api->get('categories', 'CategoriesController@index')
+            ->name('api.categories.index');
+
 
         // 需要 token 验证的接口
         // DingoApi 为我们准备好了 api.auth 这个中间件，用来区分哪些接口需要验证 token，哪些不需要
