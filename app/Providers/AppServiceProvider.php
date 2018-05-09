@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
 
         // 模型绑定失败报错404
         \API::error(function (\Illuminate\Database\Eloquent\ModelNotFoundException $exception) {
-            abort(404);
+            abort(404, '数据资源不存在');
         });
 
         // 操作无权限报错403
