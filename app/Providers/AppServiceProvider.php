@@ -46,5 +46,11 @@ class AppServiceProvider extends ServiceProvider
         \API::error(function (\Illuminate\Auth\Access\AuthorizationException $exception) {
             abort(403, $exception->getMessage());
         });
+
+        // 未登录时用user时报错
+        \API::error(function (\Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException $exception) {
+            abort(401, '用户未登录');
+        });
+
     }
 }
