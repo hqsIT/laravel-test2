@@ -74,6 +74,9 @@ $api->version('v1', [
         // 资源推荐
         $api->get('links', 'LinksController@index')
             ->name('api.links.index');
+        // 活跃用户
+        $api->get('actived/users', 'UsersController@activedIndex')
+            ->name('api.actived.users.index');
 
         // 需要 token 验证的接口
         // DingoApi 为我们准备好了 api.auth 这个中间件，用来区分哪些接口需要验证 token，哪些不需要
