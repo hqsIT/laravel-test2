@@ -2,6 +2,7 @@
 
 namespace App\Transformers;
 
+use App\Models\User;
 use Spatie\Permission\Models\Permission;
 use League\Fractal\TransformerAbstract;
 
