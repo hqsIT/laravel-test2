@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests\Api;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class ReplyRequest extends FormRequest
+class ReplyRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.

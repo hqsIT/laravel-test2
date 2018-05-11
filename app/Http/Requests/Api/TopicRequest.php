@@ -2,9 +2,7 @@
 
 namespace App\Http\Requests\Api;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class TopicRequest extends FormRequest
+class TopicRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
